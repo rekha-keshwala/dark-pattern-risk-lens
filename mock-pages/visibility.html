@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility Extraction Tests</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .test-case {
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+
+      #test-2 {
+        display: none;
+      }
+
+      #test-3 {
+        visibility: hidden;
+      }
+
+      #test-4 {
+        opacity: 0;
+      }
+
+      #test-5 {
+        width: 0;
+        height: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+      }
+
+      #test-6 {
+        position: absolute;
+        top: -100px;
+        left: 20px;
+      }
+
+      #test-7 {
+        position: absolute;
+        top: 2000px;
+        left: 20px;
+      }
+
+      #test-8 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      #hidden-parent {
+        display: none;
+      }
+      
+      #test-10 {
+        margin-top: 1000px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Visibility Extraction Test Page</h1>
+
+    <div class="test-case">
+      <h3>Test 1: Normal visible element</h3>
+      <button id="test-1">Visible Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 2: Display none</h3>
+      <button id="test-2">Display None Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 3: Visibility hidden</h3>
+      <button id="test-3">Visibility Hidden Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 4: Opacity zero</h3>
+      <button id="test-4">Opacity Zero Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 5: Zero dimensions</h3>
+      <button id="test-5">Zero Size Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 6: Above viewport</h3>
+      <button id="test-6">Above Viewport Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 7: Below viewport</h3>
+      <button id="test-7">Below Viewport Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 8: Partially visible</h3>
+      <button id="test-8">Partially Visible Button</button>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 9: Hidden parent</h3>
+
+      <div id="hidden-parent">
+        <button id="test-9">Child of Hidden Parent</button>
+      </div>
+    </div>
+
+    <div class="test-case">
+      <h3>Test 10: Visible after scrolling</h3>
+      <button id="test-10">Scroll to See This Button</button>
+    </div>
+  </body>
+</html>

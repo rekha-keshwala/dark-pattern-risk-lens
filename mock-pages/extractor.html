@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      button:first-of-type {
+        background-color: green;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      button:nth-of-type(2) {
+        background-color: red;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Continue</button>
+    <button>Cancel</button>
+    <button>Place Order</button>
+
+    <a href="/checkout">Checkout</a>
+    <a href="/cart">View Cart</a>
+
+    <label for="save">
+      <input type="checkbox" id="save" />
+      Save my details
+    </label>
+
+    <label>
+      <input type="checkbox" checked />
+      Subscribe to offers
+    </label>
+
+    <div class="checkout-section">
+      <h3>Checkout preferences</h3>
+
+      <label>
+        <input type="checkbox" />
+        Save my details
+      </label>
+
+      <button>Continue</button>
+    </div>
+
+    <p>Complete your purchase</p>
+    <p>Review your order before payment</p>
+  </body>
+</html>

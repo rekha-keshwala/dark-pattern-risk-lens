@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Pattern Risk Lens",
+  "version": "1.0.0",
+  "description": "Count buttons and checkboxes on webpages.",
+
+  "permissions": ["sidePanel"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "side_panel": {
+    "default_path": "panel/index.html"
+  },
+
+  "action": {
+    "default_title": "Open Page Scanner"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content/content.js",
+        "content/extraction/candidateSelector.js",
+        "content/extraction/basicExtractor.js",
+        "content/extraction/styleExtractor.js",
+        "content/extraction/geometryExtractor.js",
+        "content/extraction/labelExtractor.js",
+        "content/extraction/containerExtractor.js",
+        "content/extraction/visibilityExtractor.js"
+      ]
+    }
+  ]
+}
